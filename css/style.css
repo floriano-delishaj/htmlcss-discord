@@ -8,10 +8,26 @@ body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.center {    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container {
+    height: 500px;
+}
+
 .container.header {
     background: url("../img/jumbo.png") no-repeat 50% 50%;
     background-size: cover;
-    height: 70vh;
     position: relative;
 }
 
@@ -67,6 +83,31 @@ nav ul li a {
     font-size: 18px;
 }
 
+.box-img {
+    width:60%;
+}
+
+.box-img img{
+    width: 100%;
+}
+
+.section-text {
+    width: 30%;
+}
+
+.container.section-1 {
+    position: relative;
+}
+
+.box-img.s1 {
+    position: absolute;
+}
+
+.section-text h2 {
+    font-size: 38px;
+    padding-bottom: 25px;
+}
+
 /* ----------------------------------------------------------- */
 
 .white {
@@ -79,14 +120,9 @@ nav ul li a {
     color: white;
 }
 
-.jumbotron {
+.jumbotron.center {
     color: white;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     text-align: center;
-
 }
 
 .jumbotron h1 {
